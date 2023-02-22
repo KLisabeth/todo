@@ -1,18 +1,25 @@
 {
 	"compilerOptions": {
-		"target": "ESNext",
+		"target": "es5",
+		"module": "es2015",
+		"experimentalDecorators": true,
 		"useDefineForClassFields": true,
-		"module": "ESNext",
 		"moduleResolution": "Node",
-		"strict": true,
 		"jsx": "preserve",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"esModuleInterop": true,
 		"lib": ["ESNext", "DOM"],
 		"skipLibCheck": true,
-		"noEmit": true
+		"noEmit": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"./src/*" // set path `@/*` as alias of `src/*`
+			]
+		}
 	},
+	"exclude": ["node_modules"],
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.d.ts",
